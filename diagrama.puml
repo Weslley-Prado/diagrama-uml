@@ -1,0 +1,40 @@
+@startuml
+
+class iPhone {
+  - modelo: String
+  - cor: String
+  
+  + tocar(): void
+  + pausar(): void
+  + selecionarMusica(): void
+  + ligar(): void
+  + atender(): void
+  + iniciarCorreioVoz(): void
+  + exibirPagina(): void
+  + adicionarNovaAba(): void
+  + atualizarPagina(): void
+}
+
+interface ReprodutorMusical {
+  + tocar()
+  + pausar()
+  + selecionarMusica()
+}
+
+interface AparelhoTelefonico {
+  + ligar()
+  + atender()
+  + iniciarCorreioVoz()
+}
+
+interface NavegadorInternet {
+  + exibirPagina()
+  + adicionarNovaAba()
+  + atualizarPagina()
+}
+
+iPhone --> ReprodutorMusical
+iPhone --> AparelhoTelefonico
+iPhone --> NavegadorInternet
+
+@enduml
